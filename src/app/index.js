@@ -148,4 +148,31 @@ window.addEventListener('load', () => {
       },
     });
   });
+
+  let funnelCharts = document.querySelectorAll('.chart-funnel');
+  funnelCharts.forEach((item, index) => {
+    let canvas = item.querySelector('canvas'),
+      dataCount = 6,
+      chart = new Burlak.Chart.Funnel({
+        element: canvas,
+        data: [
+          {
+            label: 'Deposit',
+            value: 44,
+          },
+          {
+            label: 'Registrations',
+            value: 33,
+          },
+          {
+            label: 'Email approvment',
+            value: 22,
+          },
+          {
+            label: 'Deposit',
+            value: 3,
+          },
+        ],
+      });
+  });
 });

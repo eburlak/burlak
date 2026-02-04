@@ -4,6 +4,7 @@ export enum EType {
   PIE = 'PIE',
   DONUT = 'DONUT',
   RADAR = 'RADAR',
+  FUNNEL = 'FUNNEL',
 }
 
 export enum ERenderBy {

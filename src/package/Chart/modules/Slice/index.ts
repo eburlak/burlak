@@ -41,7 +41,7 @@ export default class Slices extends Chart {
 
     const total = data.reduce(
       (acc, item) => acc + (parseFloat(String(item.value)) || 0),
-      0
+      0,
     );
 
     return data.map((item) => ({
@@ -69,13 +69,13 @@ export default class Slices extends Chart {
 
     for (let i = 0; i <= count; i++) {
       polygon.push(
-        getPointOnArc(x, y, radius + sliceWidth / 2, startPi + part * i)
+        getPointOnArc(x, y, radius + sliceWidth / 2, startPi + part * i),
       );
     }
 
     for (let i = 0; i <= count; i++) {
       polygon.push(
-        getPointOnArc(x, y, radius - sliceWidth / 2, endPi - part * i)
+        getPointOnArc(x, y, radius - sliceWidth / 2, endPi - part * i),
       );
     }
 
@@ -83,9 +83,7 @@ export default class Slices extends Chart {
   };
 
   tooltip = () => {
-    const hovered = this.data.find((item) => {
-      return item.hovered;
-    });
+    const hovered = this.data.find((item) => item.hovered);
 
     if (!hovered) {
       return;
@@ -133,7 +131,7 @@ export default class Slices extends Chart {
         canvas.element.clientWidth -
           settings.offset.left -
           settings.offset.right -
-          (type === EType.DONUT ? settings.data.styles.width : 0)
+          (type === EType.DONUT ? settings.data.styles.width : 0),
       ) * state.loading;
 
     let sliceWidth = 0;
@@ -245,7 +243,7 @@ export default class Slices extends Chart {
           slice.y,
           slice.radius > 0 ? slice.radius : 0,
           slice.startPi,
-          slice.endPi
+          slice.endPi,
         );
         canvas.context.fill();
         canvas.context.stroke();
@@ -281,7 +279,7 @@ export default class Slices extends Chart {
           x,
           y,
           percentRadius,
-          (item.startPi + item.endPi) / 2
+          (item.startPi + item.endPi) / 2,
         );
 
         canvas.context.fillText(text, point.x, point.y);

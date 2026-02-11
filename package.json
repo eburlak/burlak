@@ -1,6 +1,6 @@
 {
   "name": "burlak",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "scripts": {
     "dev": "webpack serve --mode=development",
     "build_app": "BUILD_TARGET='app' BUILD_TYPE='umd' webpack --mode=production",
@@ -10,11 +10,11 @@
     "build": "npm run build_app && npm run build_package"
   },
   "keywords": [],
-  "author": "Eugene Burlak <eugeneburlak@yandex.ru>",
+  "author": "Evgeniy Burlak <eugeneburlak@yandex.ru>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EugeneBurlak/burlak.git"
+    "url": "git+https://github.com/eburlak/burlak.git"
   },
   "main": "package/bundle.js",
   "devDependencies": {
@@ -39,9 +39,9 @@
     "typescript": "^5.1.6"
   },
   "bugs": {
-    "url": "https://github.com/EugeneBurlak/burlak/issues"
+    "url": "https://github.com/eburlak/burlak/issues"
   },
-  "homepage": "https://github.com/EugeneBurlak/burlak#readme",
+  "homepage": "https://github.com/eburlak/burlak#readme",
   "dependencies": {},
   "description": ""
 }

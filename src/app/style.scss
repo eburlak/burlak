@@ -32,12 +32,11 @@ body {
   font-size: 0;
   display: flex;
   flex-wrap: wrap;
-  height: 100vh;
 }
 
 .chart {
   width: 50%;
-  height: 50%;
+  height: 50vh;
   user-select: none;
   canvas {
     height: 100%;
